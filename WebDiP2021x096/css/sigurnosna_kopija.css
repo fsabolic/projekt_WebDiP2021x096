@@ -1,0 +1,465 @@
+/* BOJE BOJE BOJE
+#328cc1 - svj. plava
+#d98310 - narand
+#083c5d - navy blue
+#1d2731 - black
+#aaaaaa - sivo
+*/
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url(sansation_light.woff);
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+    background-image: url('../resursi/probna1.jpg');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    font-family: 'Noto Sans';
+}
+
+#zaglavlje--skriveni-gumb:checked ~ .zaglavlje--menu{
+    left:0px;
+}
+
+#zaglavlje--skriveni-gumb:checked ~ .zaglavlje--zaglavlje .zaglavlje--naslov{
+    pointer-events: all;
+}
+
+#zaglavlje--skriveni-gumb:checked ~ .zaglavlje--zaglavlje label #zaglavlje--hambi-ikona{
+    opacity: 0;
+}
+
+#zaglavlje--skriveni-gumb{
+    display:none;
+}
+
+.zaglavlje--zaglavlje h1{
+    text-align: center;
+
+}
+
+.zaglavlje--naslov{
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+.zaglavlje--zaglavlje{
+    opacity: 0.986;
+    position: fixed;
+    display:flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 0px 15px black;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #083c5d;
+    align-items: center;
+    top:0;
+    right:0;
+    left:0;
+}
+
+.zaglavlje--skriveno-zaglavlje{
+    opacity: 0;
+    position: relative;
+    display:flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 0px 15px black;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+.zaglavlje--menu{
+    opacity: 0.987;
+    text-align: center;
+    position: fixed;
+    color: white;
+    background: #083c5d;
+    box-shadow: 0px 0px 15px black;
+    top:0;
+    left:-250vw;
+    min-width: 25vw;
+    max-width: 30vw;
+    height:100vh;
+    text-align:left;
+    padding-top: 15px;
+    overflow: auto;
+    transition:0.6s;
+}
+
+
+.zaglavlje--menu ul{
+    margin: 0;
+    text-align:left;
+    list-style: none;
+    padding:0;
+    border:none;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+.zaglavlje--menu li{
+    user-select:none;
+    transition: 0.3s;
+    border-bottom: 1px #328cc1 dotted;
+}
+
+.zaglavlje--menu ul li a{
+    display:block;
+    text-decoration: none;
+    line-height: 25px;
+    color: #f3f3f3;
+    font-size:0.9rem;
+    font-weight: 100;
+    transition: 0.17s;
+}
+
+.zaglavlje--menu li:hover a{
+    font-size:1rem;
+}
+
+.zaglavlje--menu li:hover{
+    background: #328cc1;
+}
+
+.opcenito--ikona{
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1)
+}
+
+#zaglavlje--cancel{
+    cursor: pointer;
+    margin-left: 15px;
+    width:30px;
+    height: auto;
+}
+
+#zaglavlje--hambi-ikona{
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.upravljanje-konfiguracijom--uredivanje-textarea{
+    overflow: scroll;
+    width: 200px;
+    height: 100px;
+}
+
+.zaglavlje--menu li a{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.zaglavlje--menu li:last-child{
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+
+}
+.zaglavlje--menu li:first-child{
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+
+}
+
+#zaglavlje--podaci-korisnika{
+    display: flex;
+    flex-direction: column;
+    border:2px #328cc1 solid;
+    border-radius: 30px;
+    margin:25px;
+    padding:10px;
+    padding-top: 0;
+    font-size:1rem;
+    box-shadow: 2px 2px 10px black;
+}
+
+#zaglavlje--izbornik{
+    border:2px #328cc1 solid;
+    border-radius: 30px;
+    margin:25px;
+    padding-top: 0;
+    box-shadow: 2px 2px 10px black;
+    margin-bottom: 40px;
+}
+
+#zaglavlje--odjava{
+    min-width: 70px;
+    border:3px white solid;
+    text-align:center;
+    text-decoration: none;
+    background: #d98310;
+    border-radius: 30px;
+    padding:20px 30px;
+    color:#1d2731;
+    font-size:1rem;
+    box-shadow: 2px 2px 10px black;
+    display:block;
+    width:20%;
+    margin:auto;
+    transition: 0.17s;
+
+
+}
+#zaglavlje--odjava:hover{
+    background: #f19c7d;
+    font-size: 1.1rem;
+}
+
+.glavni-sadrzaj{
+    display:flex;
+    flex-direction: column;
+    font-size: 1rem;
+    padding-top: 3vh;
+    padding-bottom: 6vh;
+    width: 75%;
+    background: #fffbef;
+    margin:0 auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.podnozje{
+    color:white;
+    background: #1d2731;
+    text-align: center;
+    height: 90px;
+    margin-top:auto;
+    box-shadow: 2px 2px 10px black;
+}
+
+
+.u_izradi--poruka{
+    text-align: center;
+    background: white;
+    font-size: 3rem;
+    border: 4px #083c5d dashed;
+}
+
+.u_izradi--poruka a{
+    font-size: 1.5rem;
+}
+
+.opcenito--forma{
+    background: white;
+    border: 2px #328cc1 solid;
+    border-radius: 30px;
+    margin: 20px;
+    padding:30px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.opcenito--forma button{
+    float:right;
+    margin-top:20px;
+}
+
+.opcenito--input{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.opcenito--input label{
+    font-weight: bold;
+    margin-right:10px;
+    align-items: center;
+}
+
+.opcenito--input input{
+    width: 50px;
+    border: 1px #328cc1 solid;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+.opcenito--input input:focus{
+    outline:none;
+    outline: 1px #328cc1 solid;
+}
+
+.opcenito--izbor{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.opcenito--izbor label{
+    font-weight: bold;
+    margin-right:10px;
+    align-items: center;
+}
+
+.opcenito--izbor select{
+    width: 100px;
+    border: 1px #328cc1 solid;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+.opcenito--izbor select:focus{
+    outline:none;
+    outline: 1px #328cc1 solid;
+}
+
+.opcenito--input input[type='file']{
+    border:none;
+    border-radius: 0;
+    width: auto;
+}
+
+.opcenito--input textarea{
+    border: 1px #328cc1 solid;
+    border-radius: 10px;
+    width:60%;
+    height:30vh;
+}
+
+.opcenito--obican-gumb{
+    color:white;
+    text-align: center;
+    border-radius: 30px;
+    background:#083c5d;
+    border: 3px #328cc1 solid;
+    box-shadow: 2px 2px 2px #aaaaaa;
+    margin:5px;
+    padding:10px 15px;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+
+.opcenito--vazan-gumb{
+    color:white;
+    text-align: center;
+    border-radius: 30px;
+    background:#d98310;
+    border: 3px #328cc1 solid;
+    box-shadow: 2px 2px 2px #aaaaaa;
+    margin:5px;
+    padding:10px 15px;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+.opcenito--vazan-gumb:hover{
+    background: #f19c7d;
+
+}
+.opcenito--obican-gumb:hover{
+    background: #328cc1 ;
+
+}
+
+.opcenito--skup-gumbova{
+    display: flex;
+    flex-direction: row;
+}
+
+#pomak-vremena{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.opcenito--polje-za-greske{
+    color: white;
+    background: #660033;
+    border:3px #cc0033 solid;
+    margin:10px;
+    padding:20px;
+}
+
+.opcenito--polje-za-greske-tocno{
+    color: white;
+    background: #006633;
+    border:3px #66ff66 solid;
+    margin:10px;
+    padding:20px;
+}
+
+.opcenito--pogresan-unos {
+    color:red;
+}
+
+.opcenito--pogresan-unos label:before{
+    content: "*";
+}
+
+.opcenito--pogresan-unos input{
+    border:2px red solid;
+}
+
+@media screen and (max-width:767px){
+    .zaglavlje--menu{
+        max-width: 100vw;
+        width: 100vw;
+
+    }
+    #zaglavlje--podaci-korisnika{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .glavni-sadrzaj{
+        width:100vw;
+    }
+
+    .zaglavlje--naslov{
+        font-size: 1.2rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .opcenito--input{
+        flex-direction: column;
+    }
+
+    .opcenito--input label{
+        font-weight: bold;
+        margin:0;
+        margin-bottom:5px;
+        align-items: center;
+    }
+
+    .opcenito--izbor{
+        flex-direction: column;
+    }
+
+    .opcenito--skup-gumbova{
+        display: flex;
+        flex-direction: column;
+    }
+    #pomak-vremena{
+        flex-direction: column;
+    }
+}
+
+
+/* BOJE BOJE BOJE
+#328cc1 - svj. plava
+#d98310 - narand
+#083c5d - navy blue
+#1d2731 - black
+#aaaaaa - sivo
+*/

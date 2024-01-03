@@ -1,0 +1,4 @@
+AuthType Basic 
+AuthName "Privatno" 
+AuthUserFile "/var/www/webdip.barka.foi.hr/2021_projekti/WebDiP2021x096/privatno/.htpasswd"
+require valid-user
